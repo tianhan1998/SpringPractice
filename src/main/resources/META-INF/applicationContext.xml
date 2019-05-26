@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="userServiceID" class="cn.th.SpringAOP.UserServiceImpl"></bean><!--目标类-->
+    <bean id="aspectID" class="cn.th.SpringAOP.Aspect"></bean><!--切面类-->
+    <aop:config>
+        <aop:pointcut id="pointCutID" expression="execution(* cn.th.SpringAOP.*.*(..))"/><!--aspectJ表达式，表示对什么切入点进行代理-->
+        <aop:advisor advice-ref="aspectID" pointcut-ref="pointCutID"></aop:advisor><!--特殊切面(增强引用，切入点引用)-->
+    </aop:config>
+</beans>
