@@ -10,8 +10,8 @@ public class TestAopTest {
 
     @Test
     public void demo01() {
-        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
-        UserService userService= (UserService)context.getBean("userServiceID");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
+        UserService userService = (UserService)applicationContext.getBean("userServiceID");
         userService.addUser();
         userService.deleteUser();
         userService.updateUser();

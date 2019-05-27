@@ -1,5 +1,8 @@
 package cn.th.SpringAOP;
 
+import org.springframework.stereotype.Service;
+
+@Service("userService")
 public class UserServiceImpl implements UserService {
     @Override
     public void addUser() {

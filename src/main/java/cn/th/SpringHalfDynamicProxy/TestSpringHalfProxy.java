@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpringHalfProxy {
     public void demo01(){
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("cn/th/SpringHalfDynamicProxy/bean.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
         UserService userService=(UserService)applicationContext.getBean("proxyFactoryBean");
         userService.addUser();
         userService.deleteUser();
