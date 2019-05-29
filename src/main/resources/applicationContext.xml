@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="dataSourceId" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    </bean>
+    <bean id="userDaoId" class="cn.th.jdbctemplate.dao.UserDao">
+        <property name="dataSource" ref="dataSourceId"></property>
+    </bean>
+    <bean id="userId" class="cn.th.jdbctemplate.entity.User">
+        <property name="username" value="tianhan"></property>
+        <property name="birthday" value="1998-06-02"></property>
+        <property name="email" value="892265525@qq.com"></property>
+        <property name="password" value="123456"></property>
+    </bean>
+</beans>
