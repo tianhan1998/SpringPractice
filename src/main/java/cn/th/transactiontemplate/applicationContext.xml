@@ -9,7 +9,7 @@
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"></bean>
 
-    <bean id="service" class="cn.th.transactiontemplate.Service.Service">
+    <bean id="serviceImpl" class="cn.th.transactiontemplate.Service.Service">
         <property name="accountDao" ref="accountDao"></property>
         <property name="template" ref="template"></property>
     </bean>
