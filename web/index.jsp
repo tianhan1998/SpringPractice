@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-HelloWorld
+<a href="${pageContext.request.contentType}/Servlet">Servlet转到</a>
 </body>
 </html>

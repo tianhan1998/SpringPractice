@@ -12,10 +12,10 @@
                            http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <context:component-scan base-package="cn.th.AnnotationSpringTransaction"></context:component-scan>
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"></bean>
-    <bean id="accountDao" class="cn.th.AnnotationSpringTransaction.Dao.Impl.AccountDaoImpl">
+    <bean id="accountDao" class="cn.th.SpringWeb.Dao.Impl.AccountDaoImpl">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
-    <bean id="service" class="cn.th.AnnotationSpringTransaction.Service.Impl.ServiceImpl">
+    <bean id="service" class="cn.th.SpringWeb.Service.Impl.ServiceImpl">
         <property name="accountDao" ref="accountDao"></property>
     </bean>
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
